@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 15px;
+}
+body {
+    font-family: "Inter", sans-serif;
+    background-color: hsl(36, 100%, 99%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem 4rem 1rem;
+}
+body.showMobileNav{
+    overflow: hidden;
+}
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: hsl(240, 100%, 5%);
+    line-height: 1.05;
+}
+h2 {
+    font-size: 2rem;
+    color: hsl(35, 77%, 62%);
+}
+h3 {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+h3:hover{
+    color: hsl(35, 77%, 62%);
+}
+h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+h4:hover{
+    color: hsl(5, 85%, 63%);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.container {
+    width: 100%;
+    max-width: 30rem;
+}
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+.featuredContent{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+.featuredContent img {
+    width: 100%;
+}
+.heroDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+.heroSubDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.heroSubDetails p{
+    line-height: 1.7;
+    color: hsl(236, 13%, 42%);
+}
+.btn {
+    font-family: inherit;
+    padding: 1rem 2rem;
+    letter-spacing: 5px;
+    font-weight: 800;
+    font-size: .75rem;
+    color: hsl(240, 100%, 5%);
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    width: max-content;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+}
+.newContent {
+    background-color: hsl(240, 100%, 5%);
+    padding: 1.5rem;
+}
+.newContentList {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1.5rem 0;
+}
+.newContentList:not(:last-child){
+    border-bottom: 1px solid hsla(233, 8%, 79%, 0.489);
+}
+.articleContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.newContentList p {
+    color: hsl(233, 8%, 79%);
+    line-height: 1.7;
+}
+.article img {
+    max-width: 15rem;
+    width: 28%;
+}
+.articleDetails {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}.articleDetails p {
+    line-height: 1.5;
+}
+.number{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: hsl(5, 85%, 63%);
+}
+.article p {
+    color: hsl(236, 13%, 42%);
+}
+
+
+.mobileNav{
+    position: fixed;
+    z-index: 10;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.142);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+body.showMobileNav .mobileNav{
+    display: flex;
+}
+.mobileNav div {
+    height: 100%;
+    width: 65%;
+    max-width: 20rem;
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+    background-color: white;
+    padding: 2.5rem 1.7rem;
+    gap: 6rem;
+    margin-right: -19rem;
+    transition: margin 1s ease;
+}
+body.showMobileNav .mobileNav div {
+    display: flex;
+    margin-right: 0rem;
+}
+.mobileNav div img {
+    width: 2rem;
+    align-self: flex-end;
+    cursor: pointer;
+}
+.mobileNav div nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+.mobileNav div nav a:hover{
+    color: hsl(35, 77%, 62%);
+}
+.mobileNav div nav a{
+    text-decoration: none;
+    color: hsl(240, 100%, 5%);
+    font-size: 1.2rem;
+    padding: .2rem 0;
+}
+.desktopNav{
+    display: none;
+}
+.desktopImg {
+    display: none;
+}
+
+
+@media screen and (min-width:1024px){
+    html {
+        font-size: 14px;
+    }
+    body {
+        padding: 2rem 1.5rem;
+    }
+    #menu{
+        display: none;
+    }
+    .desktopNav{
+        display: flex;
+        gap: 1rem;
+    }
+    .desktopNav a {
+        text-decoration: none;
+        color: hsl(240, 100%, 5%);
+        cursor: pointer;
+    }
+    .desktopNav a:hover{
+        color: hsl(35, 77%, 62%);
+    }
+    .logo {
+        width: 3.5rem;
+    }    
+    .logo img {
+        width: 100%;
+    }
+    .container{
+        max-width: 70rem;
+        width: 100%;
+        gap: 0rem;
+    }
+    .desktopImg{
+        display: block;
+    }
+    .mobileImg {
+        display: none;
+    }
+    .mainContent{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 0rem;
+        
+    }
+    .featuredContent{
+        gap: 1rem;
+    }
+   
+    .heroDetails{
+        flex-direction: row;
+        height: 100%;
+        gap: 1rem;
+    }
+    h1 {
+        flex: 1;
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    .heroSubDetails{
+        flex: 1;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .articleContent {
+        flex-direction: row;
+        grid-column: span 3;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    .article{
+        flex: 1;
+    }
+    .newContent{
+        margin-left: 1rem;
+        justify-content: space-between;
+        
+    }
+    
+
+}
+
+
+@media screen and (min-width:1200px){
+    body{
+        padding: 0;
+    }
+    h1{
+        font-size: 4rem;
+        line-height: 1;
+    }
+    h2{
+        margin-bottom: 1.5rem;
+    }
+    .container{
+        max-width: 78rem;
+    }
+    .featuredContent{
+        gap: 1rem;
+    }
+    .newContent{
+        margin-left: 2rem;
+        padding: 2rem;
+    }
+    .articleContent{
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+    .heroDetails{
+        gap: 2rem;
+    }
+}
